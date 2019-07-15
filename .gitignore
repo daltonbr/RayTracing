@@ -1,3 +1,13 @@
-*.exe
-*.obj
-*.out
+# .gitignore
+
+# Executables and object
+**/*.exe
+**/*.obj
+**/*.out
+
+# gcc
+**/*.gch
+
+# Visual Studio Code
+settings.json
+c_cpp_properties.json
