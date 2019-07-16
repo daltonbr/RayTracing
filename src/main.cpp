@@ -3,6 +3,19 @@
 #include "hitable_list.h"
 #include "float.h"
 
+// Image converting
+#define STB_IMAGE_IMPLEMENTATION
+#include "../vendor/stb/stb_image.h"
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include "../vendor/stb/stb_image_write.h"
+
+void generate_png(const char* inputFileName, const char* outputFileName )
+{
+    int x, y, n;
+    unsigned char *data = stbi_load(inputFileName, &x, &y, &n, 0);
+    stbi_write_png(outputFileName, x, y, 3, data, 0);
+}
+
 vec3 color(const ray& r, hitable *world)
 {
     hit_record rec;
@@ -23,6 +36,10 @@ vec3 color(const ray& r, hitable *world)
 
 int main()
 {
+    // const char* inputFileName = (const char*)"foo.png";//"chapter5b.ppm";
+    // const char* outputFileName = (const char*)"foo.out.png";
+    // generate_png(inputFileName, outputFileName);
+
     int nx = 200;
     int ny = 100;
     std::cout << "P3\n" << nx << " " << ny << "\n255\n";
