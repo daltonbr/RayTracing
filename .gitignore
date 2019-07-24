@@ -4,6 +4,7 @@
 **/*.exe
 **/*.obj
 **/*.out
+/temp
 
 # gcc
 **/*.gch
@@ -11,3 +12,4 @@
 # Visual Studio Code
 settings.json
 c_cpp_properties.json
+.DS_Store
