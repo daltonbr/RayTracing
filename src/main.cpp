@@ -62,8 +62,8 @@ int main()
     // A giant sphere to act as a ground (or a planet)
     
     list[2] = new sphere(vec3(0, -100.5, -1), 100, new lambertian(vec3(0.8, 0.6, 0.2)));
-    list[3] = new sphere(vec3(1, 0, -1), 0.5, new metal(vec3(0.8, 0.6, 0.2)));
-    list[4] = new sphere(vec3(-1, 0, -1), 0.5, new metal(vec3(0.8, 0.8, 0.8)));
+    list[3] = new sphere(vec3(1, 0, -1), 0.5, new metal(vec3(0.8, 0.6, 0.2), 0.3));
+    list[4] = new sphere(vec3(-1, 0, -1), 0.5, new metal(vec3(0.8, 0.8, 0.8), 0.8));
     // rose gold sphere
     //list[5] = new sphere(vec3(-0.25, -0.125, -0.25), 0.125, new metal(vec3(0.718, 0.431, 0.475)));
     hitable *world = new hitable_list(list, 5);
