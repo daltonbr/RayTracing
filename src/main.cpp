@@ -51,9 +51,9 @@ int main()
     // const char* outputFileName = (const char*)"foo.out.png";
     // generate_png(inputFileName, outputFileName);
 
-    int nx = 200;
-    int ny = 100;
-    int ns = 100;
+    int nx = 2000;
+    int ny = 1000;
+    int ns = 1000;
     std::cout << "P3\n" << nx << " " << ny << "\n255\n";
 
     hitable *list[5];

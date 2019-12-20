@@ -46,7 +46,7 @@ class dieletric : public material
 {
 public:
     dieletric(float ri) : ref_idx(ri) {}
-    virtual bool scatter(const ray& r_in, const hit_record& rec, vec& attenuation, ray& scattered) const
+    virtual bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered) const
     {
         vec3 outward_normal;
         vec3 reflected = reflect(r_in.direction(), rec.normal);
@@ -72,6 +72,6 @@ public:
     }
 
     float ref_idx;
-}
+};
 
 #endif
